@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:mso="urn:schemas-microsoft-com:office:office" xmlns:msdt="uuid:C2F41010-65B3-11d1-A29F-00AA00C14882">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="A loja mais completa do Brasil">
+    <title>DJ</title>
+    <link rel="stylesheet" href="./loja.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+        rel="stylesheet">
+    
+
+<!--[if gte mso 9]><xml>
+<mso:CustomDocumentProperties>
+<mso:_ApprovalStatus msdt:dt="string">0</mso:_ApprovalStatus>
+<mso:_ApprovalAssignedTo msdt:dt="string"></mso:_ApprovalAssignedTo>
+<mso:_ApprovalRespondedBy msdt:dt="string"></mso:_ApprovalRespondedBy>
+</mso:CustomDocumentProperties>
+</xml><![endif]-->
+</head>
+
+<body>
+    <header>
+        <img src="./logoloja.jpeg" alt="Logo Dona Julieta">
+
+        <nav class="navbar navbar-expand-lg bg-warning">
+            <div class="container-fluid">
+                <a class="navbar-brand text-light fs-1 fw-bold" href="#">Dona<br>Julieta</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="bi-three-dots-vertical text-light"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link text-light fs-5" aria-current="page" href="#">Home</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle text-light fs-5" href="produtos.html" role="button"
+                                data-bs-toggle="dropdown" aria-expanded="false">
+                                Produtos
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="#">Patchwork</a></li>
+                                <li><a class="dropdown-item" href="#">Fitness</a></li>
+                                <li><a class="dropdown-item" href="#">Mosaico</a></li>
+                            </ul>
+                        </li>
+
+
+                        <li class="nav-item">
+                            <a class="nav-link text-light fs-5" href="sobrenos.html">Sobre Nós</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-light fs-5" href="contato.html">Contato</a>
+                        </li>
+                    </ul>
+                    <form class="d-flex" role="search">
+                        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" />
+                        <button class="btn btn-outline-light text-light" type="submit">Search</button>
+                    </form>
+                    <button class="btn btn-light btn-outline-light text-dark m-2" type="button"
+                        data-bs-toggle="offcanvas" data-bs-target="#login" aria-controls="offcanvasExample">
+                        Login/SignUp
+                    </button>
+
+                </div>
+            </div>
+        </nav>
+
+    </header>
+    <div class="offcanvas offcanvas-end" tabindex="-1" id="login" aria-labelledby="offcanvasExampleLabel">
+        <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="offcanvasExampleLabel">Login/Sign Up</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+            <!-- Form de Login -->
+            <form>
+                <div class="mb-3">
+                    <label for="emailInput" class="form-label">Email</label>
+                    <input type="email" class="form-control" id="emailInput" placeholder="Digite seu email">
+                </div>
+                <div class="mb-3">
+                    <label for="passwordInput" class="form-label">Senha</label>
+                    <input type="password" class="form-control" id="passwordInput" placeholder="Digite sua senha">
+                </div>
+                <button type="submit" class="btn btn-primary w-100 mb-3">Entrar</button>
+            </form>
+            <hr>
+            <!-- Form de Cadastro -->
+            <form>
+                <div class="mb-3">
+                    <label for="nameInput" class="form-label">Nome</label>
+                    <input type="text" class="form-control" id="nameInput" placeholder="Digite seu nome">
+                </div>
+                <div class="mb-3">
+                    <label for="emailRegInput" class="form-label">Email</label>
+                    <input type="email" class="form-control" id="emailRegInput" placeholder="Digite seu email">
+                </div>
+                <div class="mb-3">
+                    <label for="passwordRegInput" class="form-label">Senha</label>
+                    <input type="password" class="form-control" id="passwordRegInput" placeholder="Digite sua senha">
+                </div>
+                <button type="submit" class="btn btn-success w-100">Cadastrar</button>
+            </form>
+        </div>
+    </div>
+    <div class="modal fade" id="modal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="exampleModalLabel">Carrinho atualizado</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <p>Produto adicionado no carrinho com sucesso!</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container my-5">
+
+        <div id="meuCarrossel" class="carousel slide">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="../Loja real/Imagens/tecido.png" class="d-block w-100"
+                        alt="Promoção de Periféricos Gamer">
+                </div>
+                <div class="carousel-item">
+                    <img src="../Loja real/Imagens/linhas.webp" class="d-block w-100"
+                        alt="Novos Smartphones em Oferta">
+                </div>
+                <div class="carousel-item">
+                    <img src="../Loja real/Imagens/azulejo.png" class="d-block w-100" alt="Notebooks de Alta Performance">
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#meuCarrossel" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#meuCarrossel" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+
+
+
+    </div>
+    <div class="container">
+        <h1 class="text-center my-4">Nossos Produtos</h1>
+        <h2 class="text-center my-5">Patchwork</h2>
+        <div class="row">
+
+            <div class="col-12 col-md-6 col-lg-3">
+                <div class="card" style="width: 18rem;">
+                    <img src="../Loja real/Imagens/Gemini_NossaSenhora.png" class="card-img-top" alt="Nossa_Senhora">
+                    <div class="card-body"> 
+                        <h5 class="card-title">Quadro Nossa Senhora</h5>
+                        <p class="card-text">R$ 650,00</p>
+                        <a href="#" class="btn btn-primary">Comprar</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-12 col-md-6 col-lg-3">
+                <div class="card" style="width: 18rem;">
+                    <img src="../Loja real/Imagens/mantamarela.png" class="card-img-top" alt="Manta_amarela">
+                    <div class="card-body">
+                        <h5 class="card-title">Manta Amarela</h5>
+                        <p class="card-text">R$ 400,00</p>
+                        <a href="#" class="btn btn-primary">Comprar</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-12 col-md-6 col-lg-3">
+                <div class="card" style="width: 18rem;">
+                    <img src="../Loja real/Imagens/Gemini_almofada NossaSenhora.png" class="card-img-top"
+                        alt="Almofada_Nossa_Senhora_Aparecida">
+                    <div class="card-body">
+                        <h5 class="card-title">Almofada de Nossa Senhora de Aparecida</h5>
+                        <p class="card-text">R$ 85,00</p>
+                        <a href="#" class="btn btn-primary">Comprar</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-12 col-md-6 col-lg-3">
+                <div class="card" style="width: 18rem;">
+                    <img src="../Loja real/Imagens/mantapuzzle.png" class="card-img-top" alt="mantapuzzle">
+                    <div class="card-body">
+                        <h5 class="card-title">Manta Puzzle</h5>
+                        <p class="card-text">R$ 1200,00</p>
+                        <a href="#" class="btn btn-primary">Comprar</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-12 col-md-6 col-lg-3">
+                <div class="card" style="width: 18rem;">
+                    <img src="../Loja real/Imagens/Mug rug coraçao.jpeg" class="card-img-top" alt="Mugrugcoracao">
+                    <div class="card-body">
+                        <h5 class="card-title">Mug Rug Coração</h5>
+                        <p class="card-text">R$ 35,00</p>
+                        <a href="#" class="btn btn-primary">Comprar</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-12 col-md-6 col-lg-3">
+                <div class="card" style="width: 18rem;">
+                    <img src="../Loja real/Imagens/Geminicolcha.png" class="card-img-top" alt="Colcha">
+                    <div class="card-body">
+                        <h5 class="card-title">Colcha</h5>
+                        <p class="card-text">R$ 1400,00</p>
+                        <a href="#" class="btn btn-primary">Comprar</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-12 col-md-6 col-lg-3">
+                <div class="card" style="width: 18rem;">
+                    <img src="../Loja real/Imagens/Geminimanta.png" class="card-img-top" alt="Mantamedalhao">
+                    <div class="card-body">
+                        <h5 class="card-title">Manta Medalhão</h5>
+                        <p class="card-text">R$ 1000,00</p>
+                        <a href="#" class="btn btn-primary">Comprar</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-12 col-md-6 col-lg-3">
+                <div class="card" style="width: 18rem;">
+                    <img src="../Loja real/Imagens/Geminicaminho.png" class="card-img-top" alt="Caminhodemesa">
+                    <div class="card-body">
+                        <h5 class="card-title">Caminho de Mesa azul</h5>
+                        <p class="card-text">R$ 250,00</p>
+                        <a href="#" class="btn btn-primary">Comprar</a>
+                    </div>
+                </div>
+            </div>
+
+           
+
+            <h2 class="text-center my-5">Fitness e Moda Praia</h2>
+            <div class="row">
+
+  <div class="col-12 col-md-6 col-lg-3">
+                <div class="card" style="width: 18rem;">
+                    <img src="../Loja real/Imagens/topebermudafit.png" class="card-img-top" alt="Topbermuda">
+                    <div class="card-body">
+                        <h5 class="card-title">Top e Bermuda</h5>
+                        <p class="card-text">R$ 150,00</p>
+                        <a href="#" class="btn btn-primary">Comprar</a>
+                    </div>
+                </div>
+            </div>
+
+                <div class="col-12 col-md-6 col-lg-3">
+                <div class="card" style="width: 18rem;">
+                    <img src="../Loja real/Imagens/biquinidourado.png" class="card-img-top" alt="biquinidourado">
+                    <div class="card-body">
+                        <h5 class="card-title">Biquini</h5>
+                        <p class="card-text">R$ 180,00</p>
+                        <a href="#" class="btn btn-primary">Comprar</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-12 col-md-6 col-lg-3">
+                <div class="card" style="width: 18rem;">
+                    <img src="../Loja real/Imagens/biquiniolhogrego.png" class="card-img-top"
+                        alt="Almofada_Nossa_Senhora_Aparecida">
+                    <div class="card-body">
+                        <h5 class="card-title">Biquini</h5>
+                        <p class="card-text">R$ 85,00</p>
+                        <a href="#" class="btn btn-primary">Comprar</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-12 col-md-6 col-lg-3">
+                <div class="card" style="width: 18rem;">
+                    <img src="../Loja real/Imagens/biquinionca.png" class="card-img-top" alt="mantapuzzle">
+                    <div class="card-body">
+                        <h5 class="card-title">Biquini</h5>
+                        <p class="card-text">R$ 1200,00</p>
+                        <a href="#" class="btn btn-primary">Comprar</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-12 col-md-6 col-lg-3">
+                <div class="card" style="width: 18rem;">
+                    <img src="../Loja real/Imagens/sungainf.png" class="card-img-top" alt="Mugrugcoracao">
+                    <div class="card-body">
+                        <h5 class="card-title">Sunga Infantil</h5>
+                        <p class="card-text">R$ 35,00</p>
+                        <a href="#" class="btn btn-primary">Comprar</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-12 col-md-6 col-lg-3">
+                <div class="card" style="width: 18rem;">
+                    <img src="../Loja real/Imagens/biqunipreto.png" class="card-img-top" alt="Colcha">
+                    <div class="card-body">
+                        <h5 class="card-title">Biquini</h5>
+                        <p class="card-text">R$ 1400,00</p>
+                        <a href="#" class="btn btn-primary">Comprar</a>
+                    </div>
+                </div>
+            </div>
+
+          
+
+            
+
+            </div>
+        </div>
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+
+
+
+
+</body>
+
+</html>
